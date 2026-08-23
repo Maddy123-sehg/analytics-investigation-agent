@@ -2,7 +2,19 @@
 
 [![Tests](https://github.com/Maddy123-sehg/analytics-investigation-agent/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/Maddy123-sehg/analytics-investigation-agent/actions/workflows/test.yml)
 
-A small, interview-explainable Python agent that investigates a daily revenue change. It uses a visible decision loop and two analytics tools to identify the likely driver from sample sales data.
+A transparent Python analytics agent that investigates a daily revenue change. It uses a visible decision loop and two analytics tools to identify the likely driver from sample sales data.
+
+> Investigates a **15.2% revenue decline**, isolates Pharmacy as the primary driver, and distinguishes a value/mix problem from an order-volume problem.
+
+## Investigation results
+
+| Metric | Previous day | Current day | Change |
+|---|---:|---:|---:|
+| Revenue | $76,400 | $64,815 | **-15.2%** |
+| Orders | 750 | 747 | **-0.4%** |
+| Average order value | $101.87 | $86.77 | **-14.8%** |
+
+**Primary driver:** Pharmacy revenue declined by **$12,305**, while overall order volume remained nearly stable.
 
 ## What makes it agentic?
 
@@ -68,3 +80,7 @@ The badge at the top of this page is live proof that GitHub runs both the agent 
 - Put the data in SQLite and add a read-only SQL tool.
 - Add an LLM planner while retaining tool validation and the trace.
 - Add charts or a small Streamlit interface.
+
+## Skills demonstrated
+
+`Python` · `Agent Design` · `Business Analysis` · `KPI Decomposition` · `Root-Cause Investigation` · `Automated Testing` · `GitHub Actions`
