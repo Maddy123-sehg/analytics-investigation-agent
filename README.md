@@ -62,14 +62,6 @@ not an order-volume problem.
 
 The badge at the top of this page is live proof that GitHub runs both the agent and its automated tests successfully on every push and pull request. Click it to inspect the run and logs.
 
-## How to explain it in an interview
-
-1. **Goal:** explain a revenue change with evidence.
-2. **Tools:** one tool calculates headline metrics; another groups them by a chosen dimension.
-3. **Agent loop:** decide what to inspect, call a tool, observe, repeat, then synthesize.
-4. **Guardrails:** allowed dimensions are explicit, the dataset is read-only, and tests cover the expected driver.
-5. **Tradeoff:** the deterministic policy is transparent and cheap, but less flexible than an LLM planner.
-
 ## Good version-2 extensions
 
 - Accept natural-language questions and dates.
