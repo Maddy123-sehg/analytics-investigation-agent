@@ -1,5 +1,7 @@
 # Analytics Investigation Agent
 
+[![Tests](https://github.com/Maddy123-sehg/analytics-investigation-agent/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/Maddy123-sehg/analytics-investigation-agent/actions/workflows/test.yml)
+
 A small, interview-explainable Python agent that investigates a daily revenue change. It uses a visible decision loop and two analytics tools to identify the likely driver from sample sales data.
 
 ## What makes it agentic?
@@ -40,6 +42,25 @@ python -m unittest discover -s tests
 ```
 
 No API key is needed. To customize the data location, copy `.env.example` to `.env`; `.env` is ignored by Git so local settings and future secrets stay out of the repository.
+
+## Example result
+
+Running `python main.py` produces an evidence-backed investigation and a full decision trace:
+
+```text
+INVESTIGATION SUMMARY
+Period: 2026-01-13 -> 2026-01-14
+Revenue: $76,400 -> $64,815 (-15.2%)
+Orders: 750 -> 747 (-0.4%)
+Average order value: $101.87 -> $86.77 (-14.8%)
+
+Primary driver: category = Pharmacy
+Evidence: this segment changed revenue by $-12,305.
+Conclusion: the revenue movement is primarily a mix/value problem,
+not an order-volume problem.
+```
+
+The badge at the top of this page is live proof that GitHub runs both the agent and its automated tests successfully on every push and pull request. Click it to inspect the run and logs.
 
 ## How to explain it in an interview
 
